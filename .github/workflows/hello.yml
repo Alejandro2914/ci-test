@@ -12,6 +12,7 @@ jobs:
       - name: Echo the message
         run: |
           echo "Hola Entrenador Pokemon"
+            echo "Hola Bulbasur"
       - name: Dime la fecha
         run: date
       - run: ls -l

@@ -96,16 +96,17 @@ jobs:
           wait-on: http://localhost:5000
 
   deploy:
-     needs: [test, e2e]
-     runs-on: ubuntu-latest
-     steps:
-       - name: Checkout code
-         uses: actions/checkout@v2
-         with:
+    needs: [test, e2e]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
           fetch-depth: 0
-       - name: Deploy to Railway
-         if: ${{ github.event_name == 'push' }}
-         uses: bervProject/railway-deploy@main
-         with:
+      - name: Deploy to Railway
+        if: ${{ github.event_name == 'push' }}
+        uses: bervProject/railway-deploy@main
+        with:
           railway_token: ${{ f9090737-a6f6-473d-8bb6-9eefb664e32a }}
           service: "my-service"
+ 

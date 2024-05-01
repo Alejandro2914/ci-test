@@ -12,7 +12,7 @@ jobs:
       - name: Echo the message
         run: |
           echo "Hola Entrenador Pokemon"
-            echo "Hola Bulbasur y Pikachu"
+            echo "Hola Bulbasur y Pikachu 1"
 
       - name: Dime la fecha
         run: date
